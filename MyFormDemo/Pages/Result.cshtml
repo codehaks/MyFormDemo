@@ -1,0 +1,11 @@
+﻿@page
+@model MyFormDemo.Pages.ResultModel
+@{
+}
+
+
+@if (TempData["color"] != null)
+{
+    <h2>You selected :</h2>
+    <p>@TempData["color"]</p>
+}
