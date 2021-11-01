@@ -4,8 +4,13 @@
 }
 
 
-@if (TempData["color"] != null)
+@if (TempData["colors"] != null)
 {
+    var colors = (IList<string>)(TempData["colors"]);
     <h2>You selected :</h2>
-    <p>@TempData["color"]</p>
+    foreach (var color in colors)
+    {
+    <p>@color</p>    
+    }
+    
 }

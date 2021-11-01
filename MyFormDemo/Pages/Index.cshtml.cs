@@ -13,11 +13,11 @@ namespace MyFormDemo.Pages
         }
 
         [BindProperty]
-        public string Color { get; set; }
+        public IList<string> Colors { get; set; }
 
         public IActionResult OnPost()
         {
-            TempData["color"]= Color;
+            TempData["colors"]= Colors;
             return RedirectToPage("./result");
         }
     }
